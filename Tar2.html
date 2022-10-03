@@ -13,14 +13,15 @@
         counter = 0
         grades = 0
         
-        while (currentGrade != -1)
+        while (true)
         {
-        currentGrade = parseInt(prompt('Please enter grade:'))
-        if (currentGrade != -1)
-        {
+        currentGrade = parseInt(prompt('Please enter grade:'));
+        if (currentGrade < 0)
+            break;
+        if (currentGrade > 100)
+            continue;
         counter ++
-        grades += currentGrade
-        }    
+        grades += currentGrade    
         }
         document.write(`You have entered ${counter} grades and the average is ${grades / counter}`)
         </script>
