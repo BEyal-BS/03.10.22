@@ -4,6 +4,22 @@
     <title>Class exercise 1</title>
 </head>
 <body>
+    <p><input type="number" id="inpt"></p>
+    <p>
+        click here:
+        <button type="button" onclick="buttonClick()">Click me!</button>
+    </p>
+    <script>
+        function buttonClick()
+        {
+            x = parseInt(document.getElementById('inpt').value)
+            while (x >= 10)
+            {
+                x = Math.floor(x / 10)
+            }
+        document.write(`The most left digit is ${x}`)
+        }
+    </script>
     
 </body>
 </html>
