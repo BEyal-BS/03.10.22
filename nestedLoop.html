@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nested loops</title>
+</head>
+<body>
+    <script>
+//Get number from user
+//prints stars at the quantity
+//Repeat until user input = 0
+
+/*Exercise 1
+    while (true)
+        {
+            counter = parseInt(prompt('Enter a number:'))
+            if (counter == 0)
+                break;
+            while(counter > 0)
+            {
+                document.write('*')
+                counter --
+            }
+            document.write ('<br>')
+        }
+*/
+//Exercise 2
+    while (true)
+    {
+        number = parseInt(prompt('Enter a number (-1 to exit)'))
+        if (number == -1)
+            break
+        while (Math.floor(number / 10) != 0)
+        {
+            number = Math.floor(number / 10)
+        }
+        document.write(number)
+    }
+    </script>
+    
+</body>
+</html>
