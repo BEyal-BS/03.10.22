@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Average</title>
+</head>
+<body>
+    <!--
+        1. Get unknown quantity of grades from user (break flag = -1)
+        2. Return the grade average
+    -->
+    <script>
+        currentGrade = 0
+        counter = 0
+        grades = 0
+        
+        while (currentGrade != -1)
+        {
+        currentGrade = parseInt(prompt('Please enter grade:'))
+        if (currentGrade != -1)
+        {
+        counter ++
+        grades += currentGrade
+        }    
+        }
+        document.write(`You have entered ${counter} grades and the average is ${grades / counter}`)
+        </script>
+</body>
+</html>

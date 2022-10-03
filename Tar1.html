@@ -4,20 +4,32 @@
     <title>Class exercise 1</title>
 </head>
 <body>
-    <p><input type="number" id="inpt"></p>
+    <p>
+        <label for="inptStrng">Enter a number:</label>
+        <input type="number" id="inptStrng"><br><br>
+        <label for="inptdigit">Enter a single digit:</label>
+        <input type="number" id="inptDigit">
+    </p>
     <p>
         click here:
         <button type="button" onclick="buttonClick()">Click me!</button>
     </p>
+    <p id="result"></p>
     <script>
         function buttonClick()
         {
-            x = parseInt(document.getElementById('inpt').value)
+            x = parseInt(document.getElementById('inptStrng').value)
+            digit = parseInt(document.getElementById('inptDigit').value)
+            counter = 0
             while (x >= 10)
             {
+                if (x % 10 == digit)
+                {
+                    counter ++
+                }
                 x = Math.floor(x / 10)
             }
-        document.write(`The most left digit is ${x}`)
+        document.getElementById('result').innerHTML = `The digit ${digit} appears ${counter} times`
         }
     </script>
     
